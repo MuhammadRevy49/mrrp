@@ -25,12 +25,12 @@ export default function Navbar() {
                     isScrolled ? 'bg-blue-400 shadow-md text-white' : 'bg-transparent'
                 }`}
             >
-                <div className="transition-all text-black hover:text-blue-400">
+                <div className={`transition-all ${isScrolled ? 'text-white hover:text-black' : 'text-black hover:text-blue-400'}`}>
                     <a href="/" className="font-bold flex items-center">
                         <CircleDollarSign className="mr-1" /> MRRP
                     </a>
                 </div>
-                <Menu onClick={() => setIsSidebarOpen(true)} className="md:hidden block cursor-pointer" />
+                <Menu onClick={() => setIsSidebarOpen(true)} className="md:hidden block cursor-pointer text-black" />
                 <ul className="hidden md:flex">
                     <a href="#home" className={`p-2 m-1 transition-all ${isScrolled ? 'text-white' : 'text-black'}`}>Home</a>
                     <a href="#skill" className={`p-2 m-1 transition-all ${isScrolled ? 'text-white' : 'text-black'}`}>Skill</a>
@@ -55,10 +55,10 @@ export default function Navbar() {
                     <div className="flex flex-col">
                         <div className="flex justify-between p-3">
                             <div className="flex items-center hover:text-blue-400 transition-all select-none">
-                                <CircleDollarSign className="mr-1" />
+                                <CircleDollarSign className="mr-1 text-black" />
                                 <h1 className="font-bold text-black">MRRP</h1>
                             </div>
-                            <X onClick={() => setIsSidebarOpen(false)} className="text-gray-800 hover:text-blue-400 cursor-pointer transition-all" />
+                            <X onClick={() => setIsSidebarOpen(false)} className="text-gray hover:text-blue-400 cursor-pointer transition-all" />
                         </div>
                         <div className="flex flex-col text-center">
                             <a
