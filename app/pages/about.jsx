@@ -20,7 +20,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <img src="images/mrevy2.png" className="h-80 object-cover rounded-xl shadow-md" alt="Foto Revy" />
+            <img src="images/mrevy2.png" className="h-80 object-cover rounded-xl" alt="Foto Revy" />
           </motion.div>
 
           <motion.div
@@ -41,6 +41,7 @@ export default function About() {
               <p className="my-1"><span className="font-bold">Sekolah: </span>SMK Negeri 1 <a href="https://cimahikota.go.id" className="text-blue-400">Cimahi</a>.</p>
               <p className="my-1"><span className="font-bold">Hobi: </span>Berwirausaha, Ngoding</p>
               <p className="my-1"><span className="font-bold">Cita-cita: </span>Pengusaha, IT Web Developer</p>
+              <p className="my-1"><span className="font-bold">CV : </span><a href="" className="text-blue-400">Klik disini</a></p>
             </div>
           </motion.div>
         </div>

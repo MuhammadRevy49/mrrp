@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-12 md:px-20 gap-12 max-w-7xl mx-auto"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-6 md:px-20 gap-12 max-w-7xl mx-auto"
     >
       {/* Gambar dengan animasi */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex-shrink-0 w-90 h-90 sm:w-48 sm:h-48 md:w-90 md:h-90  overflow-hidden"
+        className="flex-shrink-0 w-70 h-70 sm:w-48 sm:h-48 md:w-90 md:h-90  overflow-hidden"
       >
         <img
           src="/images/mrevy.png"
