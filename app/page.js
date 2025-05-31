@@ -2,6 +2,8 @@ import Home from "./pages/home";
 import Skill from "./pages/skill";
 import Project from "./pages/project";
 import About from "./pages/about";
+import Contact from "./pages/contact";
+import Footer from "./pages/footer";
 
 export default function Master() {
   return (
@@ -10,6 +12,8 @@ export default function Master() {
     <Skill/>
     <Project/>
     <About/>
+    <Contact/>
+    <Footer/>
     </>
   );
 }

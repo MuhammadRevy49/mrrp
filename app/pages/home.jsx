@@ -1,20 +1,34 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 export default function Home() {
   return (
     <div
       id="home"
       className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-12 md:px-20 gap-12 max-w-7xl mx-auto"
     >
-      {/* Bagian kiri: gambar */}
-      <div className="flex-shrink-0 w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-xl overflow-hidden shadow-lg">
+      {/* Gambar dengan animasi */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="flex-shrink-0 w-90 h-90 sm:w-48 sm:h-48 md:w-90 md:h-90  overflow-hidden"
+      >
         <img
-          src="/images/your-photo.jpg" // Ganti dengan path gambar kamu
-          alt="Foto Saya"
+          src="/images/mrevy.png"
+          alt="Muhammad Revy R.P."
           className="w-full h-full object-cover"
         />
-      </div>
+      </motion.div>
 
-      {/* Bagian kanan: teks */}
-      <div className="flex flex-col justify-center text-left max-w-xl">
+      {/* Teks dengan animasi */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="flex flex-col justify-center text-left max-w-xl"
+      >
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
           Saya seorang <span className="text-blue-500">Web Developer</span>
         </h1>
@@ -23,9 +37,14 @@ export default function Home() {
           Saya fokus pada pengembangan frontend yang responsif dan menarik.
         </p>
         <div className="my-3">
-            <a href="#skill" className="px-4 py-2 text-blue-400 border border-blue-400 rounded-full hover:bg-blue-400 hover:text-white transition-all">Pelajari Lebih Lanjut</a>
+          <a
+            href="#skill"
+            className="px-4 py-2 text-blue-400 border border-blue-400 rounded-full hover:bg-blue-400 hover:text-white active:bg-blue-400 active:text-white transition-all"
+          >
+            Pelajari Lebih Lanjut
+          </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

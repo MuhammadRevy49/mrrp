@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         {/* Background image */}
         <div className="fixed inset-0 -z-10 h-screen min-w-screen">
           <img
-            src="/images/bg2.jpg"
+            src="/images/bg3.jpg"
             alt="Background"
             className="w-screen h-full object-cover"
           />
