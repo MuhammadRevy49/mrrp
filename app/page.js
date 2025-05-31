@@ -7,13 +7,13 @@ import Footer from "./pages/footer";
 
 export default function Master() {
   return (
-    <>
-    <Home/>
-    <Skill/>
-    <Project/>
-    <About/>
-    <Contact/>
-    <Footer/>
-    </>
+    <div className="overflow-x-hidden">
+      <Home />
+      <Skill />
+      <Project />
+      <About />
+      <Contact />
+      <Footer />
+    </div>
   );
 }

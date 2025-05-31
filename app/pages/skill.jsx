@@ -68,7 +68,7 @@ export default function Skill() {
 
         {/* Tech Stack Slider */}
         <h2 className="text-2xl font-semibold text-center mb-6">Tech Stack</h2>
-        <div className="overflow-x-auto scrollbar-hide flex justify-center overflow-y-hidden">
+        <div className="overflow-x-auto scrollbar-hide flex justify-center max-w-full overflow-y-hidden">
           <div className="flex gap-6 px-4 py-4 w-max snap-x snap-mandatory">
             {languages.map((lang, i) => (
               <motion.div

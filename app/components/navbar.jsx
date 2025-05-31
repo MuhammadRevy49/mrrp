@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="relative">
             {/* Navbar */}
             <nav
-                className={`fixed top-0 left-0 w-full z-39 flex items-center justify-between p-3 transition-all duration-300 ${
+                className={`fixed top-0 left-0 w-full z-90 flex items-center justify-between p-3 transition-all duration-300 ${
                     isScrolled ? 'bg-blue-400 shadow-md text-white' : 'bg-transparent'
                 }`}
             >
@@ -41,7 +41,7 @@ export default function Navbar() {
             </nav>
 
             {/* Sidebar overlay + panel */}
-            <div className={`fixed inset-0 z-40 transition duration-300 ${isSidebarOpen ? 'visible' : 'invisible'}`}>
+            <div className={`fixed inset-0 z-93 transition duration-300 ${isSidebarOpen ? 'visible' : 'invisible'}`}>
                 <div
                     className={`absolute inset-0 bg-black/90 bg-opacity-30 transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0'}`}
                     onClick={() => setIsSidebarOpen(false)}
