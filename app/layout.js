@@ -21,14 +21,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-fixed`}
-        style={{
-          backgroundImage: "url('/images/bg.jpeg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
       >
+        {/* Background image */}
+        <div className="fixed inset-0 -z-10 h-screen min-w-screen">
+          <img
+            src="/images/bg2.jpg"
+            alt="Background"
+            className="w-screen h-full object-cover"
+          />
+        </div>
+
         <Navbar />
         {children}
       </body>

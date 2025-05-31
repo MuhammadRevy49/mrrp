@@ -2,7 +2,7 @@
 
 export default function About() {
     return (
-        <div id="about" className="min-h-screen flex items-center bg-transparent px-4 py-10 text-gray-800">
+        <div id="about" className="min-h-screen flex items-center bg-white/60 px-4 py-10 text-gray-800">
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-4xl font-bold mb-6 text-center">About <span className="text-blue-500">Me</span></h1>
                 <p className="text-center text-gray-500 mb-10">Berikut adalah beberapa penjelasan tentang diri saya.</p>
