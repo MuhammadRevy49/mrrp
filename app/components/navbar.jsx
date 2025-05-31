@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="relative">
             {/* Navbar */}
             <nav
-                className={`fixed top-0 left-0 w-full z-39 flex items-center justify-between p-2 transition-all duration-300 ${
+                className={`fixed top-0 left-0 w-full z-39 flex items-center justify-between p-3 transition-all duration-300 ${
                     isScrolled ? 'bg-blue-400 shadow-md text-white' : 'bg-transparent'
                 }`}
             >

@@ -5,7 +5,7 @@ export default function Home() {
                 className="fixed inset-0 bg-cover bg-center pointer-events-none"
                 style={{
                     backgroundImage: "url('/images/bg.jpeg')",
-                    opacity: 0.5,
+                    opacity: 1,
                     zIndex: -1,
                 }}
             />
