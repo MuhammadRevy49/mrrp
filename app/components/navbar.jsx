@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [activeLink, setActiveLink] = useState('');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,7 +25,7 @@ export default function Navbar() {
                     isScrolled ? 'bg-blue-400 shadow-md text-white' : 'bg-transparent'
                 }`}
             >
-                <div className="transition-all hover:text-blue-400">
+                <div className="transition-all text-black hover:text-blue-400">
                     <a href="/" className="font-bold flex items-center">
                         <CircleDollarSign className="mr-1" /> MRRP
                     </a>
@@ -55,20 +56,75 @@ export default function Navbar() {
                         <div className="flex justify-between p-3">
                             <div className="flex items-center hover:text-blue-400 transition-all select-none">
                                 <CircleDollarSign className="mr-1" />
-                                <h1 className="font-bold">MRRP</h1>
+                                <h1 className="font-bold text-black">MRRP</h1>
                             </div>
                             <X onClick={() => setIsSidebarOpen(false)} className="text-gray-800 hover:text-blue-400 cursor-pointer transition-all" />
                         </div>
                         <div className="flex flex-col text-center">
-                            <a href="#home" className="p-2 mx-3 text-black hover:bg-blue-400 rounded transition-all" onClick={() => setIsSidebarOpen(false)}>Home</a>
+                            <a
+                                href="#home"
+                                onClick={() => {
+                                    setActiveLink('home');
+                                    setIsSidebarOpen(false);
+                                }}
+                                className={`p-2 mx-3 rounded transition-all ${
+                                    activeLink === 'home' ? 'bg-blue-400 text-white font-bold' : 'text-black hover:bg-blue-400'
+                                }`}
+                            >
+                                Home
+                            </a>
                             <div className="border-t border-gray-300 mx-3 my-2"></div>
-                            <a href="#skill" className="p-2 mx-3 text-black hover:bg-blue-400 rounded transition-all" onClick={() => setIsSidebarOpen(false)}>Skill</a>
+                            <a
+                                href="#skill"
+                                onClick={() => {
+                                    setActiveLink('skill');
+                                    setIsSidebarOpen(false);
+                                }}
+                                className={`p-2 mx-3 rounded transition-all ${
+                                    activeLink === 'skill' ? 'bg-blue-400 text-white font-bold' : 'text-black hover:bg-blue-400'
+                                }`}
+                            >
+                                Skill
+                            </a>
                             <div className="border-t border-gray-300 mx-3 my-2"></div>
-                            <a href="#projects" className="p-2 mx-3 text-black hover:bg-blue-400 rounded transition-all" onClick={() => setIsSidebarOpen(false)}>Projects</a>
+                            <a
+                                href="#projects"
+                                onClick={() => {
+                                    setActiveLink('projects');
+                                    setIsSidebarOpen(false);
+                                }}
+                                className={`p-2 mx-3 rounded transition-all ${
+                                    activeLink === 'projects' ? 'bg-blue-400 text-white font-bold' : 'text-black hover:bg-blue-400'
+                                }`}
+                            >
+                                Projects
+                            </a>
                             <div className="border-t border-gray-300 mx-3 my-2"></div>
-                            <a href="#about" className="p-2 mx-3 text-black hover:bg-blue-400 rounded transition-all" onClick={() => setIsSidebarOpen(false)}>About</a>
+                            <a
+                                href="#about"
+                                onClick={() => {
+                                    setActiveLink('about');
+                                    setIsSidebarOpen(false);
+                                }}
+                                className={`p-2 mx-3 rounded transition-all ${
+                                    activeLink === 'about' ? 'bg-blue-400 text-white font-bold' : 'text-black hover:bg-blue-400'
+                                }`}
+                            >
+                                About
+                            </a>
                             <div className="border-t border-gray-300 mx-3 my-2"></div>
-                            <a href="#contact" className="p-2 mx-3 text-black hover:bg-blue-400 rounded transition-all" onClick={() => setIsSidebarOpen(false)}>Contact</a>
+                            <a
+                                href="#contact"
+                                onClick={() => {
+                                    setActiveLink('contact');
+                                    setIsSidebarOpen(false);
+                                }}
+                                className={`p-2 mx-3 rounded transition-all ${
+                                    activeLink === 'contact' ? 'bg-blue-400 text-white font-bold' : 'text-black hover:bg-blue-400'
+                                }`}
+                            >
+                                Contact
+                            </a>
                         </div>
                     </div>
                 </div>
