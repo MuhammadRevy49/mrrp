@@ -30,7 +30,7 @@ export default function Navbar() {
                         <CircleDollarSign className="mr-1" /> MRRP
                     </a>
                 </div>
-                <Menu onClick={() => setIsSidebarOpen(true)} className="md:hidden block cursor-pointer text-black" />
+                <Menu onClick={() => setIsSidebarOpen(true)} className={`md:hidden block cursor-pointer ${isScrolled ? 'text-white' : 'text-black'}`} />
                 <ul className="hidden md:flex">
                     <a href="#home" className={`p-2 m-1 transition-all ${isScrolled ? 'text-white' : 'text-black'}`}>Home</a>
                     <a href="#skill" className={`p-2 m-1 transition-all ${isScrolled ? 'text-white' : 'text-black'}`}>Skill</a>
@@ -43,7 +43,7 @@ export default function Navbar() {
             {/* Sidebar overlay + panel */}
             <div className={`fixed inset-0 z-40 transition duration-300 ${isSidebarOpen ? 'visible' : 'invisible'}`}>
                 <div
-                    className={`absolute inset-0 bg-black/70 bg-opacity-30 transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 bg-black/90 bg-opacity-30 transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0'}`}
                     onClick={() => setIsSidebarOpen(false)}
                 ></div>
                 <div
@@ -58,7 +58,7 @@ export default function Navbar() {
                                 <CircleDollarSign className="mr-1 text-black" />
                                 <h1 className="font-bold text-black">MRRP</h1>
                             </div>
-                            <X onClick={() => setIsSidebarOpen(false)} className="text-gray hover:text-blue-400 cursor-pointer transition-all" />
+                            <X onClick={() => setIsSidebarOpen(false)} className={`text-gray-800 hover:text-blue-400 cursor-pointer transition-all`} />
                         </div>
                         <div className="flex flex-col text-center">
                             <a
